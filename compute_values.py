@@ -14,6 +14,8 @@ count = 0
 for i in range (1, len(text)):
     for j in range (i, len(text)):
         if (text[i:j + 1] == text[0:j - i + 1]):
+            if (sp[i + count] >= len(text)):
+                break
             if (sp[i + count] == 0):
                 sp[i + count] = count + 1
             count = count + 1
